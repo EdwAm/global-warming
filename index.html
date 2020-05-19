@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Land</title>
+        <link rel="stylesheet" href="./index.css">
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+</head>
+<body>
+    <div id="map"></div> 
+    
+        <div id="topplinje">
+            <h2 id="overskrift">Trykk på landene for å se gjennomsnittstemperatur <br> og hva temperaturen vil bli i 2050. Bli med og diskuter!</h2>
+            <input type="text" id="inpNavn" placeholder="Hvem er du?">
+            <input type="text" id="inpMelding" placeholder="Hva vil du si om dette?">
+            <button id="btn">Send</button>
+        </div>
+
+        <div id="divMeldinger"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAzPSSldzlcTa3ATOvQFsP7YDlWHrAuKck",
+            authDomain: "semesteroppg.firebaseapp.com",
+            databaseURL: "https://semesteroppg.firebaseio.com",
+            projectId: "semesteroppg",
+            storageBucket: "semesteroppg.appspot.com",
+            messagingSenderId: "564589976315",
+            appId: "1:564589976315:web:0ff05ade6d4d5f0c2fae5e"
+        };
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="./index.js"></script>
+</body>
+</html>
